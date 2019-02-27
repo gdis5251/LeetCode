@@ -44,13 +44,11 @@ char* tree2str(struct TreeNode* t) {
 	size = 0;
 
 	if (t == NULL)
-		return str;
+		return """";
 
 	preorderTraversal(t);
 
 	str[size] = '\0';
 
 	return str;
-
-
 }
