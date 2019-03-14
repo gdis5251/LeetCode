@@ -65,6 +65,7 @@ public:
 			return (nums1[n / 2 - 1] + nums1[n / 2]) / 2.0;
 		}
 
+		//这两个mid的取值，不是实际的中位数的下标，而是逻辑上中位数是在第几个数
 		int mid1 = (n + m + 1) / 2;
 		int mid2 = (n + m + 2) / 2;
 
