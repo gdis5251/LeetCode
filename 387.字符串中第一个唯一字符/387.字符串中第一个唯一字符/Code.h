@@ -24,6 +24,7 @@ public:
 };*/
 
 
+/*
 class Solution {
 public:
 	int firstUniqChar(string s) {
@@ -36,6 +37,28 @@ public:
 		for (int i = 0; i < s.size(); i++)
 		{
 			if (1 == book[s[i]])
+				return i;
+		}
+
+		return -1;
+
+	}
+};*/
+
+
+//ÓÅ»¯¿Õ¼ä
+class Solution {
+public:
+	int firstUniqChar(string s) {
+		int book[26] = { 0 };
+		for (int i = 0; i < s.size(); i++)
+		{
+			book[s[i] - 'a']++;
+		}
+
+		for (int i = 0; i < s.size(); i++)
+		{
+			if (1 == book[s[i] - 'a'])
 				return i;
 		}
 

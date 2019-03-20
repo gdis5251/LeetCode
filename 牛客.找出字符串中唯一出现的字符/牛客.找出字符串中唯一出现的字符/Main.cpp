@@ -1,54 +1,34 @@
 #include <string>
 #include <iostream>
 
+int firstUniqChar(std::string s) {
+	int book[123] = { 0 };
+	for (int i = 0; i < s.size(); i++)
+	{
+		book[s[i]]++;
+	}
 
-/*
+	for (int i = 0; i < s.size(); i++)
+	{
+		if (1 == book[s[i]])
+			return i;
+	}
+
+	return -1;
+
+}
 int main(void)
 {
 	std::string s;
-
-	std::cin >> s;
-	int pos;
-	for (pos = 0; pos < s.size(); ++pos)
+	while (std::cin >> s)
 	{
-		if (s.find(s[pos], pos + 1) == -1)
-		{
-			if (s.find(s[pos]) == pos)
-			{
-				std::cout << s[pos] << std::endl;
-				break;
-			}
-		}
+		int pos = firstUniqChar(s);
+
+		if (pos == -1)
+			std::cout << -1 << std::endl;
+		else
+			std::cout << s[pos] << std::endl;
 	}
-	if (pos >= s.size())
-		std::cout << -1 << std::endl;
-
-	return 0;
-}*/
-
-int main(void)
-{
-	int book[256] = { 0 };
-	std::string s;
-	std::cin >> s;
-	for (size_t i = 0; i < s.size(); i++)
-	{
-		book[s[i]] += 1;
-	}
-
-	size_t i;
-	for (i = 0; i < s.size(); i++)
-	{
-		if (book[s[i]] == 1)
-		{
-			std::cout << s[i] << std::endl;
-			break;
-		}
-	}
-
-	if (i >= s.size())
-		std::cout << -1 << std::endl;
-
 	return 0;
 
 }
