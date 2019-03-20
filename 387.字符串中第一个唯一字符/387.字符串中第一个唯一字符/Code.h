@@ -1,5 +1,6 @@
 #include <string>
 
+/*
 class Solution {
 public:
 	int firstUniqChar(std::string s) {
@@ -19,5 +20,26 @@ public:
 		}
 
 		return -1;
+	}
+};*/
+
+
+class Solution {
+public:
+	int firstUniqChar(string s) {
+		int book[123] = { 0 };
+		for (int i = 0; i < s.size(); i++)
+		{
+			book[s[i]]++;
+		}
+
+		for (int i = 0; i < s.size(); i++)
+		{
+			if (1 == book[s[i]])
+				return i;
+		}
+
+		return -1;
+
 	}
 };
