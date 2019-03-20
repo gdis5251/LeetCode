@@ -1,15 +1,13 @@
-#include <string>
-#include <iostream>
-
 class Solution {
 public:
-	static int lengthOfLastWord(std::string s) {
-		size_t pos = s.rfind(" ");
+	int lengthOfLastWord(string s) {
+
+		while ((s.rfind(' ') == s.size() - 1) && !s.empty())
+		{
+			s.pop_back();
+		}
+		size_t pos = s.rfind(' ');
+
 		return s.size() - pos - 1;
 	}
 };
-int main(void)
-{
-	std::cout << Solution::lengthOfLastWord("a");
-	return 0;
-}
