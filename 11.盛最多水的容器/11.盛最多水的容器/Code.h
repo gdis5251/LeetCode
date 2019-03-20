@@ -1,12 +1,11 @@
-//暴力法，将所有的结果都实现一遍
 class Solution {
 public:
-	int maxArea(vector<int>& height) {
+	int maxArea(vector<int>& height) {	//暴力法
 		int max = 0;
 
 		for (int i = 0; i < height.size(); i++)
 		{
-			for (int j = 0; j < height.size(); j++)
+			for (int j = i + 1; j < height.size(); j++)
 			{
 				if (i == j)
 					continue;
@@ -15,26 +14,11 @@ public:
 
 				if (height[i] <= height[j])
 				{
-					if (i < j)
-					{
-						ml = height[i] * (j - i);
-					}
-					else
-					{
-						ml = height[i] * (i - j);
-					}
-
+					ml = height[i] * (j - i);
 				}
 				else
 				{
-					if (i < j)
-					{
-						ml = height[j] * (j - i);
-					}
-					else
-					{
-						ml = height[j] * (i - j);
-					}
+					ml = height[j] * (j - i);
 				}
 
 				if (ml > max)
