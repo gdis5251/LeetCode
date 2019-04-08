@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "515.在每个树行中找最大值", "515.在每个树行中找最大值\515.在每个树行中找最大值.vcxproj", "{C2F853BB-4B02-4D1A-BC98-DEC4D250A643}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2F853BB-4B02-4D1A-BC98-DEC4D250A643}.Debug|x64.ActiveCfg = Debug|x64
+		{C2F853BB-4B02-4D1A-BC98-DEC4D250A643}.Debug|x64.Build.0 = Debug|x64
+		{C2F853BB-4B02-4D1A-BC98-DEC4D250A643}.Debug|x86.ActiveCfg = Debug|Win32
+		{C2F853BB-4B02-4D1A-BC98-DEC4D250A643}.Debug|x86.Build.0 = Debug|Win32
+		{C2F853BB-4B02-4D1A-BC98-DEC4D250A643}.Release|x64.ActiveCfg = Release|x64
+		{C2F853BB-4B02-4D1A-BC98-DEC4D250A643}.Release|x64.Build.0 = Release|x64
+		{C2F853BB-4B02-4D1A-BC98-DEC4D250A643}.Release|x86.ActiveCfg = Release|Win32
+		{C2F853BB-4B02-4D1A-BC98-DEC4D250A643}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04121DE8-0B91-46CD-BD73-E69B16D89988}
+	EndGlobalSection
+EndGlobal
