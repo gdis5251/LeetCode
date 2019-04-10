@@ -1,4 +1,6 @@
-#include "Solution.h"
+#include "priority_queue_way.h"
+
+using namespace std;
 
 int main(void)
 {
@@ -28,7 +30,7 @@ int main(void)
     lists.push_back(&a1);
     lists.push_back(&b1);
     lists.push_back(&c1);
-        
+    
     Solution a;
     struct ListNode* ans = a.mergeKLists(lists);
 
