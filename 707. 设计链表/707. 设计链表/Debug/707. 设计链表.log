@@ -1,0 +1,15 @@
+﻿  Main.cpp
+f:\leetcode\707. 设计链表\707. 设计链表\list.h(8): error C2440: “初始化”: 无法从“MyLinkedList *”转换为“MyLinkedList”
+  f:\leetcode\707. 设计链表\707. 设计链表\list.h(8): note: 无构造函数可以接受源类型，或构造函数重载决策不明确
+f:\leetcode\707. 设计链表\707. 设计链表\list.h(9): error C2819: “MyLinkedList”类型没有重载成员“operator ->”
+  f:\leetcode\707. 设计链表\707. 设计链表\list.h(3): note: 参见“MyLinkedList”的声明
+  f:\leetcode\707. 设计链表\707. 设计链表\list.h(9): note: 是否改用“.”?
+f:\leetcode\707. 设计链表\707. 设计链表\list.h(9): error C2232: “->MyLinkedList::_val”: 左操作数有“class”类型，使用“.”
+f:\leetcode\707. 设计链表\707. 设计链表\list.h(10): error C2819: “MyLinkedList”类型没有重载成员“operator ->”
+  f:\leetcode\707. 设计链表\707. 设计链表\list.h(3): note: 参见“MyLinkedList”的声明
+  f:\leetcode\707. 设计链表\707. 设计链表\list.h(10): note: 是否改用“.”?
+f:\leetcode\707. 设计链表\707. 设计链表\list.h(10): error C2232: “->MyLinkedList::_next”: 左操作数有“class”类型，使用“.”
+f:\leetcode\707. 设计链表\707. 设计链表\list.h(11): error C2819: “MyLinkedList”类型没有重载成员“operator ->”
+  f:\leetcode\707. 设计链表\707. 设计链表\list.h(3): note: 参见“MyLinkedList”的声明
+  f:\leetcode\707. 设计链表\707. 设计链表\list.h(11): note: 是否改用“.”?
+f:\leetcode\707. 设计链表\707. 设计链表\list.h(11): error C2232: “->MyLinkedList::_prev”: 左操作数有“class”类型，使用“.”
