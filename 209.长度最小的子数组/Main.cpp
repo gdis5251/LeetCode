@@ -4,6 +4,7 @@
 
 using namespace std;
 
+/*
 class Solution {
 public:
     static int minSubArrayLen(int s, vector<int>& nums) {
@@ -47,6 +48,28 @@ public:
         return min;
     }
 };
+*/
+
+//方法二：双指针法
+class Solution {
+public:
+    int minSubArrayLen(int s, vector<int>& nums) {
+        if (s<=0||nums.size()==0) return 0;
+        int i=0,j=0,sum=0,minL=INT_MAX;
+        for (;j<nums.size();j++)
+        {
+            sum+=nums[j];
+            while (sum>=s)
+            {
+                minL=min(minL,j-i+1);
+                sum-=nums[i++];
+            }
+        }
+        if (minL==INT_MAX) return 0;
+        return minL;
+    }
+};
+
 
 int main(void)
 {
