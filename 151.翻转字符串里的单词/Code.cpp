@@ -18,12 +18,12 @@ public:
         int b = 0;
         int e = -2;
         bool isContinue = true;
-        while (isContinue)
+        while (isContinue && !s.empty())
         {
             if (space == 0)
                 b = 0;
             else
-                b = space + 1;
+                b = space;
             
             space = s.find(' ', space);
                 
@@ -37,10 +37,14 @@ public:
                 e = space - 1;
             }
             
-            if (space == 0 || space == s.size() - 1 || s[space + 1] == ' ')
+            if (space == 0 || space == s.size() - 1)
             {
                 s.erase(space, 1);
                 continue;
+            }
+            else if (s[space + 1] == ' ' && s[space - 1] != ' ')
+            {
+                s.erase(space, 1);
             }
             else
             {
