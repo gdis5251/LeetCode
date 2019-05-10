@@ -1,0 +1,32 @@
+#include <iostream>
+
+class Solution {
+public:
+    static bool isPowerOfFour(int num) {
+        if (num == 1 || num == 4)
+            return true;
+        if (num % 2 != 0)
+            return false;
+        if (num < 4)
+            return false;
+        
+        int tmp = 4;
+        
+        for (int i = 0; i < 14; i++)
+        {
+            tmp <<= 2;
+
+            if (num == tmp)
+                return true;
+        }
+        
+        return false;
+    }
+};
+
+int main(void)
+{
+    Solution::isPowerOfFour(1073741824);
+
+    return 0;
+}
