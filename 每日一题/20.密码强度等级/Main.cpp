@@ -21,6 +21,8 @@ int main(void)
         int maj = 0;
         int min = 0;
         int count = 0;
+        int ncount = 0;
+        int ccount = 0;
         std::string::iterator pit = pw.begin();
         
         while (pit != pw.end())
@@ -35,45 +37,27 @@ int main(void)
                 count++;
                 min++;
             }
+            else if (*pit >= '0' && *pit <= '9')
+                ncount++;
+            else if ((*pit < '0' || *pit > '9') && (*pit < 'A' || *pit > 'Z') && (*pit < 'a' || *pit > 'z'))
+                ccount++;
             
             pit++;
         }
         
+        // 字母得分
         if ((min == 0 && maj != 0) || (min != 0 && maj == 0))
             sum += 10;
         else if (min != 0 && maj != 0)
             sum += 20;
         
-        
         // 数字得分
-        int ncount = 0;
-        pit = pw.begin();
-        
-        while (pit != pw.end())
-        {
-            if (*pit >= '0' && *pit <= '9')
-                ncount++;
-            
-            pit++;
-        }
-        
         if (ncount == 1)
             sum += 10;
         else if (ncount > 1)
             sum += 25;
         
         // 字符得分
-        int ccount = 0;
-        pit = pw.begin();
-        
-        while (pit != pw.end())
-        {
-            if ((*pit < '0' || *pit > '9') && (*pit < 'A' || *pit > 'Z') && (*pit < 'a' || *pit > 'z'))
-                ccount++;
-            
-            pit++;
-        }
-        
         if (ccount == 1)
             sum += 10;
         else if (ccount > 1)
